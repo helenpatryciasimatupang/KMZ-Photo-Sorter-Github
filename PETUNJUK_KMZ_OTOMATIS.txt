@@ -1,0 +1,24 @@
+PANDUAN OTOMATISASI KMZ FOTO
+
+File yang tersedia:
+- kmz_photo_sorter.py: program pemrosesan.
+- JALANKAN_KMZ_OTOMATIS.bat: peluncur cepat Windows.
+
+Cara menggunakan:
+1. Instal Python 3 dari https://www.python.org/downloads/ dan centang Add Python to PATH.
+2. Masukkan semua pecahan KMZ ke dalam satu folder input.
+3. Klik dua kali JALANKAN_KMZ_OTOMATIS.bat.
+4. Masukkan alamat folder input dan folder output.
+5. Program menghasilkan:
+   - KMZ_SUDAH_BERISI_FOTO.kmz
+   - KMZ_BELUM_ADA_FOTO.kmz
+   - LAPORAN_PEMROSESAN.txt
+
+Opsional: program menerima CSV target dengan kolom name, latitude, longitude jika ingin membatasi output ke daftar lokasi tertentu. Jalankan dari Command Prompt:
+python kmz_photo_sorter.py "D:\KMZ\Input" "D:\KMZ\Hasil" "D:\KMZ\target.csv"
+
+Catatan:
+- File sumber tidak diubah.
+- Program mengenali foto yang direferensikan sebagai file gambar lokal dalam KMZ atau gambar base64 di deskripsi.
+- Jika foto ditautkan dari situs eksternal atau KML memakai struktur khusus, hasil klasifikasi mungkin memerlukan penyesuaian.
+- Uji pada salinan beberapa file dahulu sebelum memproses seluruh kumpulan.
